@@ -45,6 +45,7 @@ pipeline {
                     steps {
                         withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws']]) {
                             sh 'aws s3 ls'
+                            sh 'aws s3 rm s3://my-bucket-provility/ --recursive'
                              sh 'aws s3 sync /Users/apple/.jenkins/workspace/wehooks-test/build/ s3://my-bucket-provility/ --delete'
                         }
                     }
