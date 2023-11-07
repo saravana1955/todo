@@ -22,8 +22,8 @@ pipeline {
                     echo "Current PATH: ${env.PATH}"
                     dir('/Users/apple/.jenkins/workspace/wehooks-test') {
                         echo "Jenkins workspace path: ${env.WORKSPACE}"
-                        // npm 'install --force'
-                        // npm 'run build'
+                         npm 'install --force'
+                         npm 'run build'
                         def customImage = docker.build("saravana19/angular1245:${env.BUILD_ID}")
                     }
                 }
