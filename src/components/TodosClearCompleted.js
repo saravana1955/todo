@@ -6,7 +6,7 @@ import { inject, observer } from 'mobx-react';
 const TodosClearCompleted = inject('TodoStore')(observer(props => {
   return (
     <div>
-      <button onClick={props.TodoStore.clearCompleted}>Clear Completed</button>
+      <button onClick={props.TodoStore.clearCompleted}>Clear Completed saravana</button>
     </div>
   );
 }));

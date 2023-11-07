@@ -40,5 +40,14 @@ pipeline {
                 }
             }
         }
+
+         stage('Check AWS Credentials') {
+                    steps {
+                        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws']]) {
+                            sh 'aws s3 ls'
+                             sh 'aws s3 sync /Users/apple/.jenkins/workspace/wehooks-test/build/ s3://my-bucket-provility/'
+                        }
+                    }
+                }
     }
 }
