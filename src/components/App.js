@@ -21,7 +21,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <div className="Todo-container">
-          <input type="text" className="todo-input" placeholder="What needs to be done" ref={TodoStore.todoInput} onKeyUp={TodoStore.addTodo} />
+          <input type="text" className="todo-input" placeholder="What needs to be done mr saravana" ref={TodoStore.todoInput} onKeyUp={TodoStore.addTodo} />
 
           <ReactCSSTransitionGroup
             transitionName="fade"
