@@ -10,7 +10,6 @@ class TodoStore {
   @observable beforeEditCache = '';
   @observable todos = [];
 
-
   @action retrieveTodos = () => {
     axios.get('/todos')
       .then(response => {
