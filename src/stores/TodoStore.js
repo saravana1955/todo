@@ -4,7 +4,6 @@ import axios from 'axios';
 axios.defaults.baseURL = 'http://todo-laravel.test/api';
 configure({enforceActions: true});
 
-
 class TodoStore {
   @observable todoInput = React.createRef();
   @observable filter = 'all';
