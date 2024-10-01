@@ -1,0 +1,16 @@
+name: Block main to main merge
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for main to main merge
+        run: |
+          if [[ "${{ github.event.pull_request.base.ref }}" == "main" && "${{ github.event.pull_request.head.ref }}" == "main" ]]; then
+            echo "Merging from main to main is not allowed."
+            exit 1
+          fi
