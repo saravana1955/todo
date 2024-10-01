@@ -11,7 +11,6 @@ class TodoStore {
   @observable todos = [];
 
 
-
   @action retrieveTodos = () => {
     axios.get('/todos')
       .then(response => {
